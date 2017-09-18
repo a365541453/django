@@ -1,0 +1,215 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.left{
+	float: left;
+}
+.center{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.headbox{
+	background: url(../img/Z.jpg) no-repeat 0 0;
+	width: 240px;
+	height: 240px;
+}
+.headimg{
+	overflow: hidden;
+	height: 110px;
+	width: 110px;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 10px;
+	
+}
+.headimg img{
+	width: 100%;
+	height: 100%;
+}
+
+.fname{
+	font-size: 48px;
+	text-align: center;
+	margin-top: 28px;
+	line-height: 48px;
+}
+.lname{
+	text-align: center;
+	font-size: 26px;
+}
+
+/*目录*/
+
+.contents ul{
+	list-style: none;
+	overflow: hidden;
+	/*float: left;*/
+	width: 100%;
+	/*height: 214px;*/
+	/*overflow: hidden;*/
+}
+a{
+	text-decoration: none;
+	font-size: 18px;
+	font-weight:bold ;
+	color: #333;
+}
+
+.contents{
+	width: 240px;
+	box-sizing: border-box;
+	padding:0 13px;
+	min-height: 535px;
+	overflow: hidden;
+	background: #f6f9fa;
+	/*float: left;*/
+
+}
+
+.contents .title{
+	color: #2ab7ff;
+	padding-top:20px ;
+	padding-bottom:20px ;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+
+.contentsul li{
+	width: 100%;
+	float: none;
+	/*height: 40px;*/
+	font-size: 18px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+.contentsul a{
+	display: block;
+	cursor: pointer;
+	padding-left: 20px;
+	border-bottom: 2px solid #e5e5e5;
+	box-sizing: border-box;
+	height: 40px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+/*文本不换行，这样超出一行的部分被截取，显示...*/
+}
+
+ul a:hover{
+	color: #2ab7ff;
+	transition: all 0.4s;
+}
+.ul2{
+	display: none;
+}
+.ul2 a{
+	padding-left: 30px;
+	box-sizing: border-box;
+	font-weight: normal;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*更多按钮*/
+.contents .more{
+	width: 150px;
+	background: #118fcf;
+	color: #fff;
+	line-height: 38px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 40px;
+	cursor: pointer;
+	height: 38px;
+}
+.contents .more:hover{
+	background: #2AB7FF;
+	transition: all 0.3s;
+}
+/*目录结束*/
+
+
+/*内容开始*/
+.content{
+	float:left;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+	width: 594px;
+	min-height:770px ;
+}
+.content ul{
+	list-style: none;
+	width: 100%;
+}
+
+.content li{
+	padding: 0 40px;
+	cursor: pointer;
+	border-bottom: 2px #E5E5E5 solid;
+	padding-bottom: 20px;
+	overflow: hidden;
+	
+}
+.content li:hover .texttitle{
+	color: #2AB7FF;
+	transition: all 0.3s;
+}
+
+.content li .texttitle{
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	color: #333;
+	
+}
+.content li:first-child .text{
+	height: 27em;
+	overflow: hidden;
+}
+.content li .text{
+	height: 6em;
+	overflow: hidden;
+}
+
+.content li:first-child .texttitle{
+	padding-top: 34px;
+	padding-bottom: 34px;
+	font-size: 50px;
+}
+
+.content li .text{
+	font-size: 14px;
+	font-weight: normal;
+	color: #999;
+	line-height: 1.5em;
+}
+
+.content li .more{
+	cursor: pointer;
+	float: right;
+	margin-top: 10px;
+	/*padding-bottom: 20px;*/
+	font-size: 14px;
+	color: #2AB7FF;
+	width:94px ;
+	text-align: left;
+	background: url(../img/arrow.jpg) no-repeat center right;
+}
+.content .more:hover{
+	margin-right: -16px;
+	transition: margin-right 0.5s;
+}
+.rimg{
+	float: right;
+}
