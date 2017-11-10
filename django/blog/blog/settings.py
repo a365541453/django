@@ -123,5 +123,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     #r'/index_part/templates/static2/',
-    r'E:\GitHub\django\django\blog',
 ]
