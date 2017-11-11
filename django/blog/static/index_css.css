@@ -3,32 +3,10 @@
         padding: 0;
     }
 
-div {
-	border:1px solid red;
-}
+ #myself_photo{
+     margin: 1px auto;
+     height: 200px;
+     width: auto;
+     align: middle;
 
-.html_header{
-    margin-right:150px;
-    margin-left:150px;
-    margin-top:15px;
-    margin-bottom:10px;
-}
-
-.html_middle{
-    margin-right: 150px;
-    margin-left: 150px;
-    height: 500px;
-}
-
-p {
-	color: #FF0000;
-	font-size: 56px;
-}
-
-.html_middle_right{
-    width: 200px;
-    height: 480px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
+ }
