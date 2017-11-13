@@ -36,18 +36,19 @@
 
 <ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
 
-  {% block li_home   %}<li class="active"><a href="/">主页</a></li>  {% endblock %}
+  {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
-  {% block li_Oracle %}<li><a href="#">Oracle</a></li>  {% endblock %}
-  {% block li_KVM    %}<li><a href="#">KVM</a></li>  {% endblock %}
-  {% block li_Linux  %}<li><a href="#">Linux</a></li>  {% endblock %}
-  {% block li_Docker %}<li><a href="#">Docker</a></li>  {% endblock %}
+  {% block li_automatic %}<li><a href="/automatic_part">Automatic</a></li>  {% endblock %}
+  {% block li_kvm    %}<li><a href="/kvm_part">KVM</a></li>  {% endblock %}
+  {% block li_linux  %}<li><a href="/linux_part">Linux</a></li>  {% endblock %}
+  {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
+  {% block li_oracle %}<li><a href="/oracle_part">Oracle</a></li>  {% endblock %}
 
 </ul>
 
 <div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
     <ul>
-        {% block ten_dynamics %}<h6>最近十条动态：</h6> {% endblock %}
+        {% block ten_dynamics %}<h6></h6> {% endblock %}
         <li>1</li>
         <li>2</li>
         <li>3</li>

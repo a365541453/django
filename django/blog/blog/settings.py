@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'vmware_part',
     'index_part',
     'static',
+    'docker_part',
+    'kvm_part',
+    'linux_part',
+    'oracle_part',
+    'automatic_part',
 ]
 
 MIDDLEWARE = [

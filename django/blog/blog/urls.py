@@ -19,10 +19,21 @@ from index_part import views as index_views
 from vmware_part import views as vmware_views
 from blog import settings
 from django.views.generic.base import RedirectView
+from automatic_part import views as automatic_views
+from docker_part import views as docker_views
+from kvm_part import views as kvm_views
+from linux_part import views as linux_views
+from oracle_part import views as oracle_views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index_views.index_html),
-    url(r'^vmware_part',vmware_views.vmware_part),
+    url(r'^vmware_part$',vmware_views.vmware_index),
+    url(r'^automatic_part$',automatic_views.automatic_html),
+    url(r'^docker_part$',docker_views.docker_html),
+    url(r'^kvm_part$',kvm_views.kvm_html),
+    url(r'^linux_part$',linux_views.linux_html),
+    url(r'^oracle_part$',oracle_views.oracle_html),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
