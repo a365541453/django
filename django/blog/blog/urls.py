@@ -16,8 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from index_part import views as index_views
+from vmware_part import views as vmware_views
 from blog import settings
+from django.views.generic.base import RedirectView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index_views.index_html),
+    url(r'^vmware_part',vmware_views.vmware_part),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
 ]

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'vmware_part',
     'index_part',
+    'static',
 ]
 
 MIDDLEWARE = [

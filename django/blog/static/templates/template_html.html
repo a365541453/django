@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}胭脂落blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "bootstrap\css\bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-theme.min.css" %}"/>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <link rel="stylesheet" href="{% static "index_css.css" %}"
+
+
+</head>
+<body style="background: url({% static "images/html_backgroup.jpg" %})" >
+<div style="margin:20 px ;padding:20px;">
+
+
+    <h1>胭脂落</h1>
+
+
+<div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;">
+    <div style="overflow: auto;">
+        <img id="myself_photo" src="{%  static "images/myself_photo.jpg" %}" class="col-md-12 col-sm-12 col-xs-12"/>
+    </div>
+    <div>
+        <b>说明:</b>
+        <h6>一个无聊人干了件无聊的事情</h6>
+        <p>胭脂落</p>
+        <p>13265106653</p>
+    </div>
+
+
+</div>
+
+<div class="col-md-10 col-sm-10 col-xs-10" style="height: auto">
+
+<ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
+
+  {% block li_home   %}<li class="active"><a href="/">主页</a></li>  {% endblock %}
+  {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
+  {% block li_Oracle %}<li><a href="#">Oracle</a></li>  {% endblock %}
+  {% block li_KVM    %}<li><a href="#">KVM</a></li>  {% endblock %}
+  {% block li_Linux  %}<li><a href="#">Linux</a></li>  {% endblock %}
+  {% block li_Docker %}<li><a href="#">Docker</a></li>  {% endblock %}
+
+</ul>
+
+<div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
+    <ul>
+        {% block ten_dynamics %}<h6>最近十条动态：</h6> {% endblock %}
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
