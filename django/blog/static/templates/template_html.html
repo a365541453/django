@@ -12,21 +12,29 @@
 
 </head>
 <body style="background: url({% static "images/html_backgroup.jpg" %})" >
-<div style="margin:20 px ;padding:20px;">
 
+<!-- 头部部分  -->
+<div class="col-md-1 col-sm-1 col-xs-1"></div>
+<div class="col-md-11 col-sm-11 col-xs-11">
+    <h3 id="head_h3">胭脂落的博客<br>
+        www.zhouwanghan.com
+    </h3></div>
 
-    <h1>胭脂落</h1>
+<!-- 整体部分 -->
+<div class="col-md-12 col-sm-12 col-xs-12" style="margin:20 px ;padding:20px;">
 
 
 <div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;">
     <div style="overflow: auto;">
+        <h6>个人资料</h6>
         <img id="myself_photo" src="{%  static "images/myself_photo.jpg" %}" class="col-md-12 col-sm-12 col-xs-12"/>
     </div>
     <div>
         <b>说明:</b>
         <h6>一个无聊人干了件无聊的事情</h6>
         <p>胭脂落</p>
-        <p>13265106653</p>
+        <p>QQ：365541453</p>
+        <p>电话：13265106653</p>
     </div>
 
 
@@ -38,11 +46,11 @@
 
   {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
-  {% block li_automatic %}<li><a href="/automatic_part">Automatic</a></li>  {% endblock %}
+  {% block li_automatic %}<li><a href="/automatic_part">自动化</a></li>  {% endblock %}
   {% block li_kvm    %}<li><a href="/kvm_part">KVM</a></li>  {% endblock %}
   {% block li_linux  %}<li><a href="/linux_part">Linux</a></li>  {% endblock %}
   {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
-  {% block li_oracle %}<li><a href="/oracle_part">Oracle</a></li>  {% endblock %}
+  {% block li_database %}<li><a href="/database_part">数据库</a></li>  {% endblock %}
 
 </ul>
 

@@ -23,7 +23,7 @@ from automatic_part import views as automatic_views
 from docker_part import views as docker_views
 from kvm_part import views as kvm_views
 from linux_part import views as linux_views
-from oracle_part import views as oracle_views
+from database_part import views as oracle_views
 
 
 urlpatterns = [
@@ -34,6 +34,6 @@ urlpatterns = [
     url(r'^docker_part$',docker_views.docker_html),
     url(r'^kvm_part$',kvm_views.kvm_html),
     url(r'^linux_part$',linux_views.linux_html),
-    url(r'^oracle_part$',oracle_views.oracle_html),
+    url(r'^database_part$',oracle_views.database_html),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
 ]

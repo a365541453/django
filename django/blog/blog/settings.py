@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'docker_part',
     'kvm_part',
     'linux_part',
-    'oracle_part',
+	'database_part',
     'automatic_part',
 ]
 
@@ -120,6 +120,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DEFAULT_CHARSET = 'utf-8'
 
 
 # Static files (CSS, JavaScript, Images)
