@@ -23,8 +23,8 @@
 <!-- 整体部分 -->
 <div class="col-md-12 col-sm-12 col-xs-12" style="margin:20 px ;padding:20px;">
 
-
-<div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;">
+<!-- 整体左边的部分 -->
+<div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;border: solid 1px #333333">
     <div style="overflow: auto;">
         <h6>个人资料</h6>
         <img id="myself_photo" src="{%  static "images/myself_photo.jpg" %}" class="col-md-12 col-sm-12 col-xs-12"/>
@@ -36,14 +36,11 @@
         <p>QQ：365541453</p>
         <p>电话：13265106653</p>
     </div>
-
-
 </div>
 
-<div class="col-md-10 col-sm-10 col-xs-10" style="height: auto">
-
+<!--下面是中间主体部分-->
+<div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
 <ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
-
   {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
   {% block li_automatic %}<li><a href="/automatic_part">自动化</a></li>  {% endblock %}
@@ -51,9 +48,7 @@
   {% block li_linux  %}<li><a href="/linux_part">Linux</a></li>  {% endblock %}
   {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
   {% block li_database %}<li><a href="/database_part">数据库</a></li>  {% endblock %}
-
 </ul>
-
 <div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
     <ul>
         {% block ten_dynamics %}<h6></h6> {% endblock %}
@@ -72,7 +67,12 @@
 </div>
 </div>
 
+<!-- 下面是中间右边部分 -->
+{% block left_div  %}
+ <div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;border: solid 5px #333333 ">
 
+ </div>
+{% endblock %}
 
 
 
