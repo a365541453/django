@@ -1,16 +1,16 @@
 # coding=utf-8
 from django.contrib import admin
+from index_part.models import index_article
 
 from django import forms
-from django.forms import widgets, models, fields
+from django.forms import  fields
 
 # Register your models here.
-from index_part.models import article
 
 #form是用来控制显示的，这段代码是用来修改form的默认显示
 class FlatPageForm(forms.ModelForm):
 	class Meta:
-		model = article
+		model = index_article
 		exclude = []
 		widgets = {
 			"type": fields.Select(choices=[
@@ -34,4 +34,4 @@ class FlatPageAdmin(admin.ModelAdmin):
 
 #再将修改后的admin类的方式来注册article
 #article要用admin类的方法来注册
-admin.site.register(article,FlatPageAdmin)
+admin.site.register(index_article, FlatPageAdmin)
