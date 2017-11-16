@@ -25,7 +25,6 @@ class FlatPageForm(forms.ModelForm):
 		}
 
 
-
 #FlatPageForm是form类，不能用来与article一起注册
 #所以要将修改好的form类和admin类关联起来
 class FlatPageAdmin(admin.ModelAdmin):

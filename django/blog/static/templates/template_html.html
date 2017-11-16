@@ -20,6 +20,8 @@
         www.zhouwanghan.com
     </h3></div>
 
+<!--------------------------------------------------------------->
+
 <!-- 整体部分 -->
 <div class="col-md-12 col-sm-12 col-xs-12" style="margin:20 px ;padding:20px;">
 
@@ -39,7 +41,7 @@
 </div>
 
 <!--下面是中间主体部分-->
-<div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
+<div class="col-md-6 col-sm-6 col-xs-6" style="height: auto">
 <ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
   {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
@@ -49,9 +51,9 @@
   {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
   {% block li_database %}<li><a href="/database_part">数据库</a></li>  {% endblock %}
 </ul>
-<div class="col-md-8 col-sm-8 col-xs-8" style="height: auto">
+<div class="col-md-12 col-sm-12 col-xs-12" style="height: auto">
     <ul>
-        {% block ten_dynamics %}<h6></h6> {% endblock %}
+        <h4>{% block ten_dynamics %} {% endblock %}</h4>
         <li>1</li>
         <li>2</li>
         <li>3</li>
@@ -68,11 +70,13 @@
 </div>
 
 <!-- 下面是中间右边部分 -->
-{% block left_div  %}
- <div class="col-md-2 col-sm-2 col-xs-2" style="height: auto ;border: solid 5px #333333 ">
 
+ <div id="right_div" class="col-md-2 col-sm-2 col-xs-2" >
+    {% block left_div  %}
+
+    {% endblock %}
  </div>
-{% endblock %}
+
 
 
 
