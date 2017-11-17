@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.contrib import admin
 from linux_part.models import linux_article
 # Register your models here.
@@ -30,6 +31,17 @@ class FlatPageForm(forms.ModelForm):
 #所以要将修改好的form类和admin类关联起来
 class FlatPageAdmin(admin.ModelAdmin):
 	form = FlatPageForm
+
+	# 下面是添加富文本编辑器的代码
+	list_display = ('title', 'time', 'type', 'text')
+
+	class Media:
+		# 在管理后台的HTML文件中加入js文件, 每一个路径都会追加STATIC_URL/
+		js = (
+			'kindeditor/kindeditor-all.js',
+			'kindeditor/lang/zh_CN.js',
+			'kindeditor/config.js',
+		)
 
 
 #再将修改后的admin类的方式来注册article
