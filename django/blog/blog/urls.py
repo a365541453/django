@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf import settings
 from django.contrib import admin
 from index_part import views as index_views
 from vmware_part import views as vmware_views
@@ -24,6 +25,10 @@ from docker_part import views as docker_views
 from kvm_part import views as kvm_views
 from linux_part import views as linux_views
 from database_part import views as oracle_views
+from django.views import static
+##############
+from index_part.uploads import upload_image
+from django.views.static import serve
 
 
 urlpatterns = [
@@ -36,4 +41,9 @@ urlpatterns = [
     url(r'^linux_part$',linux_views.linux_html),
     url(r'^database_part$',oracle_views.database_html),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
+    ###################
+    url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
+    url(r'^static/upload/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
 ]
+
+

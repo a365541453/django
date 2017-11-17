@@ -37,7 +37,7 @@ class FlatPageAdmin(admin.ModelAdmin):
         # 在管理后台的HTML文件中加入js文件, 每一个路径都会追加STATIC_URL/
         js = (
             'kindeditor/kindeditor-all.js',
-            'kindeditor/lang/zh_CN.js',
+            'kindeditor/lang/zh-CN.js',
             'kindeditor/config.js',
         )
 
@@ -45,3 +45,7 @@ class FlatPageAdmin(admin.ModelAdmin):
 #再将修改后的admin类的方式来注册article
 #article要用admin类的方法来注册
 admin.site.register(index_article, FlatPageAdmin)
+
+
+
+

@@ -133,3 +133,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     #r'/index_part/templates/static2/',
 ]
+
+
+############
+import  os
+
+MEDIA_URL = "/static/upload/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/upload/")
