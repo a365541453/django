@@ -1,6 +1,15 @@
 {% extends 'template_html.html' %}
-{% block ten_dynamics %}最近十条动态：{% endblock %}
+
 {% block li_home   %}<li class="active"><a href="/">主页</a></li>  {% endblock %}
+
+{% block article_top %}<h4>最近十条动态：</h4>{% endblock %}
+
+{% block article_list %}
+    {% for i in ten %}
+        <li> <a href="article/{{ i.type }}/{{ i.id }}" > {{ i.title }} </a> </li>
+    {% endfor %}
+{% endblock %}
+
 {% block left_div %}
     <h3>主人寄语：</h3>
     <br>

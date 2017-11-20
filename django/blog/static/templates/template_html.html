@@ -41,7 +41,9 @@
 </div>
 
 <!--下面是中间主体部分-->
+
 <div class="col-md-6 col-sm-6 col-xs-6" style="height: auto">
+<!-- 中间导航栏 -->
 <ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
   {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
@@ -51,15 +53,20 @@
   {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
   {% block li_database %}<li><a href="/database_part">数据库</a></li>  {% endblock %}
 </ul>
+<!-- 中间文章部分 -->
 <div class="col-md-12 col-sm-12 col-xs-12" style="height: auto">
+
     <ul>
-        <h4>{% block ten_dynamics %} {% endblock %}</h4>
-    {% for i in n %}
-        <li>当前是第 {{ i }} 条</li>
-    {% endfor %}
+        {% block article_top %}<h4> </h4>{% endblock %}
+    <!-- 中间文章列表 -->
+    {% block article_list %}
+
+    {% endblock %}
+
     </ul>
 
 </div>
+
 </div>
 
 <!-- 下面是中间右边部分 -->

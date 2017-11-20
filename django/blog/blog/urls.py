@@ -44,6 +44,7 @@ urlpatterns = [
     ###################
     url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
     url(r'^static/upload/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
+    url(r'^article/(?P<article_type>.*)/(?P<article_id>.*)',index_views.article_html),
 ]
 
 
