@@ -6,7 +6,7 @@
 
 {% block article_list %}
     {% for i in ten %}
-        <li> <a href="article/{{ i.type }}/{{ i.id }}" > {{ i.title }} </a> </li>
+        <li> <a href="article/{{ i.type }}/{{ i.id }}" > <font size="4">{{ i.title }} </font></a> </li>
     {% endfor %}
 {% endblock %}
 
