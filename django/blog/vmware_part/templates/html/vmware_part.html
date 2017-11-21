@@ -3,3 +3,12 @@
 {% block li_vmware %}<li class="active"><a href="/vmware_part">VMware</a></li>  {% endblock %}
 
 {% block article_top %}<h4>VMware系列最近十篇：</h4>{% endblock %}
+
+{% block article_list %}
+
+    {% for i in ten %}
+        <li> <a href="article/{{ i.type }}/{{ i.id }}" > <font size="4">{{ i.title }} </font></a> </li>
+    {% endfor %}
+
+    <div style="text-align:center;"><a  href="/article_list/2"><font size="3">更多+</font></a></div>
+{% endblock %}

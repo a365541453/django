@@ -5,14 +5,9 @@
 {% block article_top %}<h4>最近十条动态：</h4>{% endblock %}
 
 {% block article_list %}
+
     {% for i in ten %}
         <li> <a href="article/{{ i.type }}/{{ i.id }}" > <font size="4">{{ i.title }} </font></a> </li>
     {% endfor %}
-{% endblock %}
 
-{% block left_div %}
-    <h3>主人寄语：</h3>
-    <br>
-    荆棘从中下足易，<br>
-    月明帘下转身难。
 {% endblock %}

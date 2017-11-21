@@ -1,0 +1,24 @@
+{% extends 'template_html.html' %}
+
+{% block li %}{% if 变量 %} class="active"{% endif %}
+  {% block li_home   %}   <li {% if article.a %}class="active"{% endif %} ><a href="/">主页</a></li>  {% endblock %}
+  {% block li_vmware %}   <li {% if article.b %}class="active"{% endif %} ><a href="/vmware_part">VMware</a></li>  {% endblock %}
+  {% block li_automatic %}<li {% if article.c %}class="active"{% endif %} ><a href="/automatic_part">自动化</a></li>  {% endblock %}
+  {% block li_kvm    %}   <li {% if article.d %}class="active"{% endif %} ><a href="/kvm_part">KVM</a></li>  {% endblock %}
+  {% block li_linux  %}   <li {% if article.e %}class="active"{% endif %} ><a href="/linux_part">Linux</a></li>  {% endblock %}
+  {% block li_docker %}   <li {% if article.f %}class="active"{% endif %} ><a href="/docker_part">Docker</a></li>  {% endblock %}
+  {% block li_database %} <li {% if article.g %}class="active"{% endif %}><a href="/database_part">数据库</a></li>  {% endblock %}
+{% endblock %}
+
+
+
+
+
+{% block article_list %}
+
+    {% for i in ten %}
+        <li> <a href="article/{{ i.type }}/{{ i.id }}" > <font size="4">{{ i.title }} </font></a> </li>
+    {% endfor %}
+
+{% endblock article_list%}
+

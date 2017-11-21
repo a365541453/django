@@ -45,6 +45,7 @@
 <div class="col-md-6 col-sm-6 col-xs-6" style="height: auto">
 <!-- 中间导航栏 -->
 <ul  class="nav nav-tabs col-md-12 col-sm-12 col-xs-12 " >
+{% block li %}
   {% block li_home   %}<li><a href="/">主页</a></li>  {% endblock %}
   {% block li_vmware %}<li><a href="/vmware_part">VMware</a></li>  {% endblock %}
   {% block li_automatic %}<li><a href="/automatic_part">自动化</a></li>  {% endblock %}
@@ -52,6 +53,7 @@
   {% block li_linux  %}<li><a href="/linux_part">Linux</a></li>  {% endblock %}
   {% block li_docker %}<li><a href="/docker_part">Docker</a></li>  {% endblock %}
   {% block li_database %}<li><a href="/database_part">数据库</a></li>  {% endblock %}
+{% endblock %}
 </ul>
 <!-- 中间文章部分 -->
 <div class="col-md-12 col-sm-12 col-xs-12" style="height: auto">
@@ -73,6 +75,10 @@
 
  <div id="right_div" class="col-md-2 col-sm-2 col-xs-2" >
     {% block left_div  %}
+        <h3>寄语：</h3>
+        <br>
+        荆棘从中下足易，<br>
+        月明帘下转身难。<br>
 
     {% endblock %}
  </div>
