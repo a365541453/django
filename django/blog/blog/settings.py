@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'linux_part',
 	'database_part',
     'automatic_part',
+    'hehuan',
 ]
 
 MIDDLEWARE = [

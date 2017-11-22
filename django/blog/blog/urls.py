@@ -26,6 +26,7 @@ from kvm_part import views as kvm_views
 from linux_part import views as linux_views
 from database_part import views as oracle_views
 from django.views import static
+from hehuan import views as hehuan_views
 ##############
 from index_part.uploads import upload_image
 from django.views.static import serve
@@ -46,6 +47,7 @@ urlpatterns = [
     url(r'^static/upload/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
     url(r'^article/(?P<article_type>.*)/(?P<article_id>.*)',index_views.article_html),
     url(r'^article_list/(?P<article_type>.*)',index_views.artcle_list),
+    url(r'^hehuan$',hehuan_views.image),
 
 ]
 

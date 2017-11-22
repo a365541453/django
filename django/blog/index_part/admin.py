@@ -32,7 +32,7 @@ class FlatPageAdmin(admin.ModelAdmin):
     form = FlatPageForm
 
     #下面是添加富文本编辑器的代码
-    list_display = ('title','time','type','text')
+    list_display = ('title','time','type')
     class Media:
         # 在管理后台的HTML文件中加入js文件, 每一个路径都会追加STATIC_URL/
         js = (
