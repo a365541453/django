@@ -1,6 +1,7 @@
 {% extends 'template_html.html' %}
 
 
+
 {% block article_top %}
 <h6>
     <br>
@@ -8,12 +9,17 @@
 </h6>
 {% endblock %}
 
-
-{% block article_list %}
+    {% block article_list %}
     <h4 style="text-align:center;" > {{ article_title }} </h4>
     <h6 style="text-align:center;">{{ article_time }}</h6>
+<div id="article_div"  >
 
     {{ article_text | safe }}
+
+</div>
+
+
+
 
 
 

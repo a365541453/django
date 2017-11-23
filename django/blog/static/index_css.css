@@ -15,8 +15,15 @@
 
  }
 
- #right_div{
+ #right_div {
      margin-top: 50px;
      height: auto;
 
  }
+
+div{
+
+     height: 90px;
+     width: 90px;
+ }
+
