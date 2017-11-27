@@ -44,17 +44,17 @@ def artcle_list(request,article_type):
 	if int(article_type) == 1:
 		article = {'a': 1}
 	elif int(article_type) == 2:
-		article = {'b': 1}
+		article = {'b': 2}
 	elif int(article_type) == 3:
-		article = {'c': 1}
+		article = {'c': 3}
 	elif int(article_type) == 4:
-		article = {'d': 1}
+		article = {'d': 4}
 	elif int(article_type) == 5:
-		article = {'e': 1}
+		article = {'e': 5}
 	elif int(article_type) == 6:
-		article = {'f': 1}
+		article = {'f': 6}
 	elif int(article_type) == 7:
-		article = {'g': 1}
+		article = {'g': 7}
 
 	for plate in (index_article,
 	              automatic_article,
@@ -63,6 +63,7 @@ def artcle_list(request,article_type):
 	              kvm_article,
 	              linux_article,
 	              vmware_article):
+
 		if int(article_type) == int(plate.objects.first().type):
 			ten = plate.objects.order_by('-id')
 
