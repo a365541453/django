@@ -12,7 +12,33 @@ from vmware_part.models import vmware_article
 
 
 def index_html(request):
-	ten = index_article.objects.order_by('-id')[:10]
+	#取每个部分的前十篇文章，所有部分最新的文章一定在每个部分的文章其中
+	automatic_ten = automatic_article.objects.order_by('-id')[:10]
+	database_ten = database_article.objects.order_by('-id')[:10]
+	docker_ten = docker_article.objects.order_by('-id')[:10]
+	kvm_ten = kvm_article.objects.order_by('-id')[:10]
+	linux_ten = linux_article.objects.order_by('-id')[:10]
+	vmware_ten = vmware_article.objects.order_by('-id')[:10]
+
+	artcle_all = []
+	for part_ten in (automatic_ten,database_ten,docker_ten,kvm_ten,linux_ten,vmware_ten):
+		for artcle in part_ten:
+			artcle_all.append(artcle)
+
+	#冒泡
+	for i in range(len(artcle_all)):
+		for j in range(i):
+			if artcle_all[j].time > artcle_all[j+1].time:
+				print(artcle_all[j].time)
+				print(artcle_all[j+1].time)
+				artcle_all[j],artcle_all[j+1] = artcle_all[j+1],artcle_all[j]
+
+	ten = artcle_all[0:9]
+
+
+
+
+	#ten = index_article.objects.order_by('-id')[:10]
 	list = []
 	for i in ten:
 		dict = {
@@ -33,6 +59,8 @@ def article_html(request, article_type, article_id):
 	              kvm_article,
 	              linux_article,
 	              vmware_article):
+		print(article_type)
+		print(plate.objects.first())
 		if int(article_type) == int(plate.objects.first().type):
 			article = plate.objects.get(id=article_id)
 	return render(request, 'html/article.html', {'article_title': article.title,
