@@ -29,16 +29,10 @@ def index_html(request):
 	for i in range(len(artcle_all)):
 		for j in range(i):
 			if artcle_all[j].time > artcle_all[j+1].time:
-				print(artcle_all[j].time)
-				print(artcle_all[j+1].time)
 				artcle_all[j],artcle_all[j+1] = artcle_all[j+1],artcle_all[j]
 
-	ten = artcle_all[0:9]
+	ten = artcle_all[::-1][0:9]
 
-
-
-
-	#ten = index_article.objects.order_by('-id')[:10]
 	list = []
 	for i in ten:
 		dict = {
